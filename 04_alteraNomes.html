@@ -8,8 +8,34 @@
     */
 
     //Entrada
+    let nomes = ["Hilário", "Rafaela", "José", "Bárbara", "Fábio", "Júlia"];
+    let nomeCerto =[]
 
 
+    for(nome of nomes){
+        let soletrado = Array.from(nome)
+        if (soletrado.includes("á")) {
+      let indice = soletrado.indexOf("á");
+      soletrado[indice] = "a";
+      soletrado = soletrado.join('')
+      nomeCerto.push(soletrado)
+    }
+    if (soletrado.includes("é")) {
+      let indice = soletrado.indexOf("é");
+      soletrado[indice] = "e";
+      soletrado = soletrado.join('')
+      nomeCerto.push(soletrado)
+    }
+    if (soletrado.includes("ú")) {
+      let indice = soletrado.indexOf("ú");
+      soletrado[indice] = "u";
+      soletrado = soletrado.join('')
+      nomeCerto.push(soletrado)
+    }
+        }
+        
+
+    alert(nomeCerto)
     //Processamento
 
 

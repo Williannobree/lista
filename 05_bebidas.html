@@ -7,7 +7,24 @@
     */
 
     //Entrada
+    let bebidas = ["Cerveja", "Vinho", "Suco Natural", "Tequila", "Água", "Refrigerante", "Vodka"];
+    
+    let ehpermitido = []
+    let naopode =[]
 
+    for(bebida of bebidas){
+        let criabebe = prompt(`${bebida} tem alchool?`)
+
+        if(criabebe == `sim` || criabebe == `s`){
+            ehpermitido.push(bebida)
+        }
+        else if( criabebe== `não` || criabebe == `nao` || criabebe== `n`)
+        {naopode.push(bebida)}
+
+        else(alert(`resposta invalida`))
+    }
+
+    document.write(`bebidas com alchol :${ehpermitido} </br> bebidas sem alchol:${naopode}`)
 
     //Processamento
 

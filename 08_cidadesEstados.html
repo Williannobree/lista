@@ -8,11 +8,27 @@
     */
 
     //Entrada
+    let cidades = ["Porto Alegre", "Curitiba", "Florianópolis", "Joinville", "Blumenau", "Gramado", "Santa Maria", "Londrina", "Itajaí"];
 
+    let sc = []
+    let pr = []
+    let rs = []
+    let estados = [sc, pr, rs]
 
-    //Processamento
+    for (cidade of cidades) {
+        let ondeEh = prompt(`de qual estado é a cidade de ${cidade}`);
 
+        if (ondeEh == `sc` || ondeEh == `santa catarina` || ondeEh == `Santa Catarina` || ondeEh == `santacatarina`) {
+            sc.push(cidade)
+        }
+        else if (ondeEh == `parana` || ondeEh == `paraná` || ondeEh == `Parana` || ondeEh == `Paraná` || ondeEh == `pr` || ondeEh == `PR`) {
+            pr.push(cidade)
+        }
+        else if (ondeEh == `rs` || ondeEh == `RS` || ondeEh == `Rio Grande do Sul` || ondeEh == `rio grande do sul`) {
+            rs.push(cidade)
+        }
+        else { alert(`cidade invalida`) }
+    }
 
-    //Saída
-
+    document.write(estados.sort((a, b) => b.length - a.length).join(`</br>`))
 </script>
